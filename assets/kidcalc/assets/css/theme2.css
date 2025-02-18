@@ -1,0 +1,36 @@
+body {
+    font-family: 'Courier New', monospace;
+    background: url('../images/space.jpg') no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.info-bar {
+    background-color: rgba(0, 0, 50, 0.8);
+    padding: 10px;
+}
+
+button {
+    background-color: #0077FF;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.calculator {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.buttons button {
+    background-color: #222;
+    color: white;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    font-size: 18px;
+}

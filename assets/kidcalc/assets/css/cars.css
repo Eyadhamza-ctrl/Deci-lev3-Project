@@ -1,0 +1,12 @@
+body {
+    background-image: url('../images/cars.jpg');
+    color: red;
+}
+
+header {
+    background-color: black;
+}
+
+button {
+    background-color: orange;
+}
