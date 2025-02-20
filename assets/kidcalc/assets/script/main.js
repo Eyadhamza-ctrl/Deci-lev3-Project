@@ -1,10 +1,10 @@
-let themes = ["theme1.css", "theme2.css", "theme3.css"];
-let currentTheme = 0;
+const themes = ["theme1.css", "theme2.css", "theme3.css"];
+let currentThemeIndex = 0;
 
-function switchTheme() {
-    currentTheme = (currentTheme + 1) % themes.length;
-    document.getElementById("themeStylesheet").href = themes[currentTheme];
-}
+        function changeTheme() {
+            currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+            document.getElementById("themeStylesheet").href = themes[currentThemeIndex];
+        }
 
 function press(value) {
     document.getElementById("calc-display").value += value;
