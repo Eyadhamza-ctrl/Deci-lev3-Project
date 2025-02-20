@@ -1,7 +1,7 @@
-const themes = ["theme1.css", "theme2.css", "theme3.css"];
+const themes = ["assets/css/theme1.css", "assets/css/theme2.css", "assets/css/theme3.css"];
 let currentThemeIndex = 0;
 
-        function changeTheme() {
+        function switchTheme() {
             currentThemeIndex = (currentThemeIndex + 1) % themes.length;
             document.getElementById("themeStylesheet").href = themes[currentThemeIndex];
         }
