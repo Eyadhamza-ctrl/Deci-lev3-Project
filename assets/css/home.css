@@ -11,7 +11,8 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: sticky; /* or fixed/sticky */
+    z-index: 1000; /* A higher value */
 }
 
 .nav-links{
@@ -21,18 +22,21 @@ nav {
     padding: 20px 15px;
     border-radius: 12px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+     /* or fixed/sticky */
   }
   .nav-links li{
     list-style: none;
     margin: 0 12px;
+     /* or fixed/sticky */
   }
   .nav-links li a{
-    position: relative;
+    
     color: #242424;
     font-size: 20px;
     font-weight: 500;
     padding: 6px 0;
     text-decoration: none;
+     /* or fixed/sticky */
   }
   .nav-links li a:before{
     content: '';
@@ -70,6 +74,7 @@ nav {
   .nav-links li.forward a:hover:before{
     transform: scaleX(1);
     transform-origin: left;
+     /* or fixed/sticky */
   }
 
 .menu-toggle {
@@ -92,6 +97,7 @@ h1 {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    z-index: -2;
 }
 
 .post-card {
@@ -102,6 +108,7 @@ h1 {
     transition: transform 0.2s;
     text-align: center;
     padding: 20px;
+    z-index: -1;
 }
 
 .post-card img {
@@ -133,7 +140,7 @@ h1 {
     cursor: pointer;
     outline: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    position: relative;
+    
     
 }
 
