@@ -9,7 +9,7 @@ body {
 
 header {
     text-align: center;
-    padding: 40px 20px;
+    padding: 10px 20px;
     background: #000;
     color: white;
 }
@@ -22,7 +22,7 @@ header h1 {
 header .btn {
     display: inline-block;
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 10px 10px;
     background: #ff9800;
     color: white;
     text-decoration: none;
