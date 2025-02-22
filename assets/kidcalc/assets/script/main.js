@@ -1,11 +1,18 @@
 const themes = ["assets/css/theme1.css", "assets/css/theme2.css", "assets/css/theme3.css"];
-let currentThemeIndex = 0;
-
+        
         function switchTheme() {
-            currentThemeIndex = (currentThemeIndex + 1) % themes.length;
-            document.getElementById("themeStylesheet").href = themes[currentThemeIndex];
+            let selectedIndex = document.getElementById("themeSelect").value;
+            document.getElementById("themeStylesheet").href = themes[selectedIndex];
         }
 
+        function displayWelcomeMessage() {
+            let username = document.getElementById("username").value;
+            if (username) {
+                document.getElementById("welcomeMessage").innerText = "Welcome, " + username + "!";
+            } else {
+                document.getElementById("welcomeMessage").innerText = "Please enter your username.";
+            }
+        }
 function press(value) {
     document.getElementById("calc-display").value += value;
 }

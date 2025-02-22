@@ -12,14 +12,19 @@
     <header class="info-bar">
         <h1>Welcome to KidCalc!</h1>
         <p>Fun and easy math for kids.</p>
-        <button onclick="switchTheme()">Switch Theme</button>
+        <label for="themeSelect">Choose a theme:</label>
+    <select id="themeSelect" onchange="switchTheme()">
+        <option value="0">theme1</option>
+        <option value="1">theme2</option>
+        <option value="2">theme3</option>
     </header>
 
     <section class="login-form">
         <h2>Login</h2>
-        <input type="text" placeholder="Username">
-        <input type="password" placeholder="Password">
-        <button>Login</button>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="displayWelcomeMessage()">Login</button>
+        <h2 id="welcomeMessage"></h2>
     </section>
 
     <section class="calculator">
@@ -44,31 +49,5 @@
             <button onclick="press('/')">/</button>
         </div>
     </section>
-<script>
-    const themes = ["../css/theme1.css", "../css/theme2.css", "../css/theme3.css"];
-let currentThemeIndex = 0;
-
-        function changeTheme() {
-            currentThemeIndex = (currentThemeIndex + 1) % themes.length;
-            document.getElementById("themeStylesheet").href = themes[currentThemeIndex];
-        }
-
-function press(value) {
-    document.getElementById("calc-display").value += value;
-}
-
-function clearDisplay() {
-    document.getElementById("calc-display").value = "";
-}
-
-function calculate() {
-    try {
-        document.getElementById("calc-display").value = eval(document.getElementById("calc-display").value);
-    } catch {
-        document.getElementById("calc-display").value = "Error";
-    }
-}
-
-</script>
 </body>
 </html>
