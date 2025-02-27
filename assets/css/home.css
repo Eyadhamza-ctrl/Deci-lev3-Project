@@ -1,205 +1,143 @@
-
+@import url(style.css);
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
 }
 
 nav {
-    padding: 10px 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: sticky; /* or fixed/sticky */
-    z-index: 1000; /* A higher value */
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1000;
 }
 
-.nav-links{
-    display: flex;
-    align-items: center;
-    background: #fff;
-    padding: 20px 15px;
-    border-radius: 12px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-     /* or fixed/sticky */
-  }
-  .nav-links li{
-    list-style: none;
-    margin: 0 12px;
-     /* or fixed/sticky */
-  }
-  .nav-links li a{
-    
-    color: #242424;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 6px 0;
-    text-decoration: none;
-     /* or fixed/sticky */
-  }
-  .nav-links li a:before{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 3px;
-    width: 0%;
-    background: #34efdf;
-    border-radius: 12px;
-    transition: all 0.4s ease;
-  }
-  .nav-links li a:hover:before{
-    width: 100%;
-  }
-  .nav-links li.center a:before{
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .nav-links li.upward a:before{
-    width: 100%;
-    bottom: -5px;
-    opacity: 0;
-  }
-  .nav-links li.upward a:hover:before{
-    bottom: 0px;
-    opacity: 1;
-  }
-  .nav-links li.forward a:before{
-    width: 100%;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.4s ease;
-  }
-  .nav-links li.forward a:hover:before{
-    transform: scaleX(1);
-    transform-origin: left;
-     /* or fixed/sticky */
-  }
+.nav-links {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links li {
+  list-style: none;
+  margin: 0 12px;
+}
+
+.nav-links li a {
+  position: relative;
+  color: #242424;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 6px 0;
+  text-decoration: none;
+}
+
+.nav-links li a:before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0%;
+  height: 3px;
+  background: #34efdf;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  transform: translateX(-50%);
+}
+
+.nav-links li a:hover:before {
+  width: 100%;
+}
 
 .menu-toggle {
-    display: none;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
 }
+
 h1 {
-    text-align: center;
-    font-size: 2.5em;
-    margin: 40px 0;
-    color: #333;
+  text-align: center;
+  font-size: 2.5em;
+  margin: 40px 0;
+  color: #333;
 }
 
 .blog-posts {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    z-index: -2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .post-card {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-    text-align: center;
-    padding: 20px;
-    z-index: -1;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  text-align: center;
+  padding: 20px;
 }
 
 .post-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 1px solid #ddd;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
 }
 
 .post-card h2 {
-    font-size: 1.4em;
-    margin: 15px 0;
+  font-size: 1.4em;
+  margin: 15px 0;
 }
 
 .post-card a {
-    text-decoration: none;
-    color: #000000;
+  text-decoration: none;
+  color: #000;
 }
 
-.post-card button a{
-    display: block;
-    margin: 10px 0;
-    padding: 5px 10px;
-    background: #353433;
-    color: white;
-    text-decoration: none;
-    border-radius: 3px;
-    transition: background 0.3s;
-    cursor: pointer;
-    outline: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    
-    
+.post-card button a {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 8px 15px;
+  background: #353433;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.post-card button a:hover {
+  background: #232221;
 }
 
 .post-card p {
-    font-size: 1em;
-    color: #555;
+  font-size: 1em;
+  color: #555;
 }
 
 .post-card:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 5px 0;
-    margin-top: 40px;
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 40px;
 }
-
-@media (max-width: 600px) {
-    h1 {
-        font-size: 1.5em;
-    }
-
-    .blog-posts {
-        grid-template-columns: 1fr;
-        padding: 10px;
-    }
-
-    .post-card {
-        padding: 10px;
-    }
-
-    footer {
-        font-size: 0.8em;
-    }
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #222;
-        padding: 10px 0;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        text-align: center;
-        padding: 6px 0;
-    }
-}
-
